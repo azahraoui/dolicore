@@ -8,7 +8,7 @@ The below graph shows the dolibase lite structure & files:
 dolibase
 ├── core
 │   ├── class
-│   │   ├── module.php
+│   │   ├── BaseModule.php
 │   │   ├── widget.php
 │   │   ├── page.php
 │   │   ├── field.php

@@ -1,7 +1,5 @@
 <?php
 
-namespace DoliCore;
-
 $dolibase_path = get_dolibase_path();
 
 return array(

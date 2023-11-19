@@ -102,26 +102,6 @@ if (! function_exists('dolibase_buildurl'))
 }
 
 /**
- * Return Dolibase relative path
- *
- * @return     string     Dolibase relative path as 'dolibase' or 'module/dolibase'
- */
-if (! function_exists('get_dolibase_path'))
-{
-	function get_dolibase_path()
-	{
-		if (file_exists(DOL_DOCUMENT_ROOT . '/dolibase')) {
-			return 'dolibase';
-		}
-		else {
-			global $dolibase_config;
-
-			return $dolibase_config['module']['folder'].'/dolibase';
-		}
-	}
-}
-
-/**
  * Check if a value have been submitted by GET or POST method
  *
  * @param      $value_name       value name

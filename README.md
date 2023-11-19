@@ -108,7 +108,7 @@ Check this [demonstration video](https://youtu.be/BmbAXGRQqyA) for a quick examp
 dol_include_once('mymodule/autoload.php');
 
 // Load Dolibase Module class
-dolibase_include_once('core/class/module.php');
+dolibase_include_once('core/class/BaseModule.php');
 
 class modMyModule extends DolibaseModule
 {
