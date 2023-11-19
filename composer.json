@@ -1,7 +1,13 @@
 {
   "name": "azahraoui/dolicore",
   "description": "DoliCore based on dolibase plugin of Dolibarr",
+  "license": "LGPL-3.0-or-later",
   "require": {
     "php": ">=8.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "AZahraoui\\DoliCore\\": "src"
+    }
   }
 }
