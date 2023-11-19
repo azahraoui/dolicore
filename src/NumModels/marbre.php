@@ -1,51 +1,37 @@
 <?php
-/**
- * Dolibase
- * 
- * Open source framework for Dolibarr ERP/CRM
- *
- * Copyright (c) 2018 - 2019
- *
- *
- * @package     Dolibase
- * @author      AXeL
- * @copyright   Copyright (c) 2018 - 2019, AXeL-dev
- * @license     MIT
- * @link        https://github.com/AXeL-dev/dolibase
- * 
- */
 
-dolibase_include_once('core/class/num_model.php');
+namespace AZahraoui\DoliCore\NumModels;
+
+use AZahraoui\DoliCore\Class\NumModel;
 
 /**
  * NumModelMarbre class
  *
  * Class to manage module numbering rules Marbre
  */
-
 class NumModelMarbre extends NumModel
 {
-	public $version       = 'dolibarr'; // 'development', 'experimental', 'dolibarr'
-	public $nom           = 'Marbre';
-	protected $const_name = '';
-	protected $table_name = '';
-	protected $field_name = 'ref';
-	protected $prefix     = '';
+    public $version = 'dolibarr'; // 'development', 'experimental', 'dolibarr'
+    public $nom = 'Marbre';
+    protected $const_name = '';
+    protected $table_name = '';
+    protected $field_name = 'ref';
+    protected $prefix = '';
 
-	/**
-	 * Constructor
-	 *
-	 * @param     $const_name_prefix     Constant name prefix
-	 * @param     $model_name            Numbering model name
-	 */
-	public function __construct($const_name_prefix, $model_name = '')
-	{
-		global $dolibase_config;
+    /**
+     * Constructor
+     *
+     * @param     $const_name_prefix     Constant name prefix
+     * @param     $model_name            Numbering model name
+     */
+    public function __construct($const_name_prefix, $model_name = '')
+    {
+        global $dolibase_config;
 
-		// Generate constant name
-		$this->const_name = (! empty($const_name_prefix) ? $const_name_prefix : get_rights_class(true)) . '_MARBRE_MASK';
+        // Generate constant name
+        $this->const_name = (!empty($const_name_prefix) ? $const_name_prefix : get_rights_class(true)) . '_MARBRE_MASK';
 
-		// Set parameters
+        // Set parameters
 		if (! empty($model_name))
 		{
 			$this->table_name = $dolibase_config['numbering_model'][$model_name]['table'];

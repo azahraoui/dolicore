@@ -1,42 +1,26 @@
 <?php
-/**
- * Dolibase
- * 
- * Open source framework for Dolibarr ERP/CRM
- *
- * Copyright (c) 2018 - 2019
- *
- *
- * @package     Dolibase
- * @author      AXeL
- * @copyright   Copyright (c) 2018 - 2019, AXeL-dev
- * @license     MIT
- * @link        https://github.com/AXeL-dev/dolibase
- * 
- */
 
-dolibase_include_once('core/doc_models/pdf_azur.modules.php');
+namespace AZahraoui\DoliCore\DocModels;
 
 /**
  * pdf_crabe class
  *
  * Class to generate PDF with template Crabe
  */
-
 class pdf_crabe extends pdf_azur
 {
-	/**
-	 * Constructor
-	 *
-	 * @param      DoliDB      $db      Database handler
-	 */
-	public function __construct($db)
-	{
-		parent::__construct($db);
+    /**
+     * Constructor
+     *
+     * @param DoliDB $db Database handler
+     */
+    public function __construct($db)
+    {
+        parent::__construct($db);
 
-		global $langs;
+        global $langs;
 
-		$this->name        = 'crabe';
+        $this->name = 'crabe';
 		$this->description = $langs->trans('DocModelCrabeDescription');
 	}
 
